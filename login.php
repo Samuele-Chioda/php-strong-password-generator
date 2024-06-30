@@ -1,5 +1,7 @@
 <?php
 
+$username = $_POST['name'];
+$password = $_POST['password'];
 
 $utenti = [
     [
@@ -15,6 +17,12 @@ $utenti = [
         'password' => 'passwordTre'
     ]
 ];
+
+foreach ($utenti as $utente) {
+    if ($utente['nome'] == $username && $utente['password'] == $password) {
+        echo 'accesso consentito';
+    }
+}
 
 ?>
 
