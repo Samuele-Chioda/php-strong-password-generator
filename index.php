@@ -6,6 +6,6 @@
     <title>PHP Session Login</title>
 </head>
 <body>
-    <?php  echo 'ciaoooooooo';  ?>
+    <?php   ?>
 </body>
 </html>

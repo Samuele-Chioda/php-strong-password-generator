@@ -12,3 +12,5 @@ alla pagina principale della nostra applicazione (index.php), in cui visualizzia
 
 Creiamo poi una pagina di logout (logout.php) che rimuova le informazioni della sessione dalla sessione attuale e redirezioni
 all pagina di login (login.php).
+
+
