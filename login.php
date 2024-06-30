@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 $username = $_POST['name'];
 $password = $_POST['password'];
@@ -20,7 +22,9 @@ $utenti = [
 
 foreach ($utenti as $utente) {
     if ($utente['nome'] == $username && $utente['password'] == $password) {
-        echo 'accesso consentito';
+        $_SESSION['username'] = $username;
+        header('location: index.php');
+        exit();
     }
 }
 
@@ -37,7 +41,7 @@ foreach ($utenti as $utente) {
 
 <body>
     <div>
-        <form action="./index.php" method="post">
+        <form action="./login.php" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <br>
